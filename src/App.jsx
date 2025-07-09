@@ -28,8 +28,9 @@ function App() {
   }
 
   function toggleTaskDone(index) {
-    const updateTask = [...toDo];
-    updateTask[index].done=!updateTask[index].done;
+    const updateTask = toDo.map(task=>
+      task.id ===index? {...task, done: !task.done} : task
+    );
     setToDo(updateTask);
   }
 

@@ -14,13 +14,13 @@ export default function AddForm({add, deleteAll}) {
 
     return (
     <form onSubmit={handleSubmit}>
+        <h1>Todo</h1>
         <fieldset>
-            <h1>Todo</h1>
-            <input type="text" className="bg-red-100" value={newTask} onChange={handleChange}/>
-            <button type="submit" disabled={newTask.trim() === ""}>Entrer</button>
+            <input type="text" className="rounded-md m-2 p-2 " value={newTask} onChange={handleChange} placeholder="Enter votre tâche"/>
+            <button type="submit" disabled={newTask.trim() === ""} className="m-2">Entrer</button>
         </fieldset>
         <fieldset>
-            <button type="button" onClick={deleteAll}>Supprimer toutes les taches</button>
+            <button type="button" onClick={deleteAll} className="m-2">Supprimer toutes les taches</button>
         </fieldset>
     </form>
 );
