@@ -18,17 +18,24 @@ function App() {
   );
   
   function addNewTask(newTask) {
-    setToDo([...toDo,newTask]);
+    const taskObject = {label: newTask, done: false};
+    setToDo([...toDo,taskObject]);
   }
 
   function deleteAllTask() {
     localStorage.setItem("toDo", JSON.stringify([]));
     setToDo([]);
   }
+
+  function toggleTaskDone(index) {
+    const updateTask = [...toDo];
+    updateTask[index].done=!updateTask[index].done;
+    setToDo(updateTask);
+  }
   return (
     <>
       <AddForm add={addNewTask} deleteAll={deleteAllTask}/>
-      <TaskList todo={toDo}/>
+      <TaskList todo={toDo} toggleDone={toggleTaskDone}/>
     </>
   )
 }
