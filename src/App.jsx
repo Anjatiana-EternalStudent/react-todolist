@@ -18,7 +18,7 @@ function App() {
   );
   
   function addNewTask(newTask) {
-    const taskObject = {label: newTask, done: false};
+    const taskObject = {id:crypto.randomUUID(),label: newTask, done: false, creationDate: new Date().toLocaleDateString()};
     setToDo([...toDo,taskObject]);
   }
 
@@ -32,10 +32,15 @@ function App() {
     updateTask[index].done=!updateTask[index].done;
     setToDo(updateTask);
   }
+
+  function deleteOneTask(index) {
+    const deleteTask = toDo.filter(task=>task.id !== index);
+    setToDo(deleteTask);
+  }
   return (
     <>
       <AddForm add={addNewTask} deleteAll={deleteAllTask}/>
-      <TaskList todo={toDo} toggleDone={toggleTaskDone}/>
+      <TaskList todo={toDo} toggleDone={toggleTaskDone} deleteOne={deleteOneTask}/>
     </>
   )
 }
