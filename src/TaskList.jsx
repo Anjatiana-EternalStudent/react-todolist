@@ -36,13 +36,13 @@ export default function TaskList({todo, toggleDone, deleteOne}) {
                         type="button" 
                         onClick={()=>deleteOne(element.id)}  
                         className="
-                        bg-red-500 
+                        bg-red-600 
                         text-white 
                         m-2
                         px-3 
                         py-1 
                         rounded 
-                        hover:bg-red-600">Delete
+                        hover:bg-red-700">Delete
                     </button>
                 </li>
             )}
