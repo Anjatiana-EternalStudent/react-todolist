@@ -1,12 +1,38 @@
-# React + Vite
+# React Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est une application de gestion de tâches (Todo List) développée avec **React**.  
+L’utilisateur peut ajouter des tâches, les marquer comme effectuées, les supprimer une par une ou toutes d’un coup. Les tâches sont sauvegardées localement dans le navigateur grâce à `localStorage`.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Ajouter une tâche avec date de création
+- Afficher la liste des tâches
+- Cocher une tâche comme terminée
+- Supprimer une tâche spécifique
+- Supprimer toutes les tâches
+- Sauvegarde automatique dans le navigateur
 
-## Expanding the ESLint configuration
+## Technologies utilisées
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (avec hooks : `useState`, `useEffect`)
+- Tailwind CSS
+- HTML/CSS
+- Stockage local (`localStorage`)
+
+## Lancer le projet en local
+
+1. Cloner le dépôt :
+
+   ```bash
+   git clone https://github.com/Anjatiana-EternalStudent/react-todolist.git
+   cd react-todolist```
+
+2. Installer les dépendances :
+```bash
+npm install
+```
+3. Lancer le serveur de développement :
+```bash
+npm run dev
+
+```
