@@ -17,7 +17,7 @@ export default function AddForm({add, deleteAll}) {
         <fieldset>
             <h1>Todo</h1>
             <input type="text" className="bg-red-100" value={newTask} onChange={handleChange}/>
-            <button type="submit" disabled={()=>value===""?false:true}>Entrer</button>
+            <button type="submit" disabled={newTask.trim() === ""}>Entrer</button>
         </fieldset>
         <fieldset>
             <button type="button" onClick={deleteAll}>Supprimer toutes les taches</button>
