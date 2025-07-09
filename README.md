@@ -2,7 +2,7 @@
 
 Ce projet est une application de gestion de tâches (Todo List) développée avec **React**.  
 L’utilisateur peut ajouter des tâches, les marquer comme effectuées, les supprimer une par une ou toutes d’un coup. Les tâches sont sauvegardées localement dans le navigateur grâce à `localStorage`.
-
+[voir l'application en ligne](https://anjatiana-react-todolist.vercel.app/)
 ## Fonctionnalités
 
 - Ajouter une tâche avec date de création
